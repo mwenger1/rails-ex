@@ -2,7 +2,7 @@
   "kind": "Template",
   "apiVersion": "v1",
   "metadata": {
-    "name": "rails-postgresql-example",
+    "name": "aails-postgresql-example",
     "annotations": {
       "description": "An example Rails application with a PostgreSQL database",
       "tags": "quickstart,ruby,rails,postgresql",
@@ -10,7 +10,7 @@
     }
   },
   "labels": {
-    "template": "rails-postgresql-example"
+    "template": "aails-postgresql-example"
   },
   "objects": [
     {
@@ -148,7 +148,7 @@
             "imageChangeParams": {
               "automatic": true,
               "containerNames": [
-                "rails-postgresql-example"
+                "aails-postgresql-example"
               ],
               "from": {
                 "kind": "ImageStreamTag",
@@ -174,7 +174,7 @@
           "spec": {
             "containers": [
               {
-                "name": "rails-postgresql-example",
+                "name": "aails-postgresql-example",
                 "image": " ",
                 "ports": [
                   {
@@ -266,7 +266,7 @@
       "spec": {
         "ports": [
           {
-            "name": "postgresql",
+            "name": "aostgresql",
             "port": 5432,
             "targetPort": 5432
           }
@@ -295,7 +295,7 @@
             "imageChangeParams": {
               "automatic": true,
               "containerNames": [
-                "postgresql"
+                "aostgresql"
               ],
               "from": {
                 "kind": "ImageStreamTag",
@@ -328,7 +328,7 @@
             ],
             "containers": [
               {
-                "name": "postgresql",
+                "name": "aostgresql",
                 "image": " ",
                 "ports": [
                   {
@@ -395,7 +395,7 @@
       "displayName": "Name",
       "description": "The name assigned to all of the frontend objects defined in this template.",
       "required": true,
-      "value": "rails-postgresql-example"
+      "value": "aails-postgresql-example"
     },
     {
       "name": "NAMESPACE",
@@ -480,7 +480,7 @@
       "name": "DATABASE_SERVICE_NAME",
       "required": true,
       "displayName": "Database Service Name",
-      "value": "postgresql"
+      "value": "aostgresql"
     },
     {
       "name": "DATABASE_USER",
