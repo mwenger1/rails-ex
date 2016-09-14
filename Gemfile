@@ -30,6 +30,7 @@ gem "sprockets-es6"
 gem "title"
 gem "uglifier"
 gem "will_paginate"
+gem "sqlite3"
 
 group :development do
   gem "better_errors"
