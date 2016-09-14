@@ -1,14 +1,30 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>Welcome to OpenShift</title>
-  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
-  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <meta charset="utf-8" />
+  <meta name="ROBOTS" content="NOODP" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <%#
+    Configure default and controller-, and view-specific titles in
+    config/locales/en.yml. For more see:
+    https://github.com/calebthompson/title#usage
+  %>
+  <title><%= title %></title>
+
+  <%= render "site_header" %>
+
+  <%= stylesheet_link_tag :application, media: "all" %>
   <%= csrf_meta_tags %>
 </head>
-<body>
-
-<%= yield %>
-
+<body class="<%= body_class %>">
+  <%= render "site_html_top_half" %>
+  <div id="trial-match" class="columns wrapper">
+    <div class="trial-base-container">
+      <%= yield %>
+    </div>
+  </div>
+  <%= render "site_html_bottom_half" %>
+  <%= render "javascript" %>
+  <%= render "css_overrides" %>
 </body>
 </html>

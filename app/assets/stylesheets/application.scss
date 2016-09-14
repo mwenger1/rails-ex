@@ -1,0 +1,38 @@
+@charset "utf-8";
+
+@import "bourbon";
+
+#trial-match {
+  @import "base/base";
+  @import "refills/tables";
+  @import "refills/expander";
+
+  @import "components/sidebar";
+  @import "components/navigation";
+  @import "components/infographic";
+
+  .trial-base-container {
+    display: flex;
+  }
+
+  .trial-results {
+    @include padding($large-spacing);
+    flex: 2;
+  }
+
+  .trial-count {
+    text-align: right;
+  }
+
+  .trial-list li {
+    @include margin($large-spacing null);
+  }
+
+  .section {
+    @include margin($large-spacing null);
+  }
+
+  .site-details p {
+    margin-bottom: $base-spacing;
+  }
+}

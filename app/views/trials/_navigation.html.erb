@@ -1,0 +1,10 @@
+<div class="search-result-links">
+  <%= link_to raw("&#8679; #{t(".return_to_search")}"), trials_path(session[:search_params]) %>
+
+  <% if search_results.present? %>
+    <div class="navigation-links">
+      <%= previous_trial_link(@trial.id) %>
+      <%= next_trial_link(@trial.id) %>
+    </div>
+  <% end %>
+</div>
